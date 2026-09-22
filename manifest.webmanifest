@@ -1,0 +1,18 @@
+{
+  "id": "/",
+  "name": "Radio Mixtaz 98.5",
+  "short_name": "Mixtaz",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "radio-mixtaz-cover-v3.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
