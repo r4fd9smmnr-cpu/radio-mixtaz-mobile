@@ -1,0 +1,285 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Radio Mixtaz 98.5 FM</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.app{max-width:760px;margin:auto;background:#050505;min-height:100vh}
+header{position:sticky;top:0;z-index:20;background:#020202;border-bottom:1px solid #252525}
+.top{display:flex;align-items:center;justify-content:space-between;padding:10px 14px}
+.logo{width:145px;height:72px;object-fit:contain}
+.actions{display:flex;align-items:center;gap:8px}button{cursor:pointer}
+.icon{border:0;background:none;color:white;font-size:22px}
+.live{border:0;border-radius:99px;background:#e50914;color:white;font-weight:900;padding:11px 14px}
+nav{display:grid;grid-template-columns:repeat(5,1fr);padding:0 6px}
+nav button{border:0;background:none;color:#eee;padding:11px 2px;font-size:12px}
+nav button.on{color:#ff2b32;border-bottom:2px solid #ff2b32}
+.page{display:none}.page.on{display:block}
+.hero{position:relative;height:680px;overflow:hidden;background:#080808}
+.hero-bg{position:absolute;inset:0;background-image:url("image-1.jpeg");background-size:cover;background-position:center top;top:calc(-1 * max(116px,min(31.6043vw,240.193px)) );filter:saturate(1.08)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 63%,rgba(5,5,5,.75) 78%,#050505 100%)}
+.real-controls{position:absolute;left:0;right:0;bottom:22px;z-index:3;text-align:center;padding:0 14px}
+.genres{font-size:10px;letter-spacing:1.2px;white-space:nowrap;overflow:hidden}
+.controls{display:grid;grid-template-columns:1fr 88px 1fr;gap:10px;align-items:center;margin:16px 0 10px}
+.pill{border:1px solid #777;border-radius:99px;background:#111d;color:#fff;padding:13px 5px;font-weight:800;font-size:11px}
+.play{width:88px;height:88px;border-radius:50%;border:3px solid #fff;background:#e50914;color:#fff;font-size:38px;box-shadow:0 0 22px #e50914}
+.status{font-size:13px;font-weight:900}.status small{display:block;margin-top:5px;font-weight:500}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:red;box-shadow:0 0 9px red;margin-right:6px}
+.player{margin:18px 14px 28px;padding:14px;border:1px solid #555;border-radius:17px;background:#111318}
+.row{display:flex;align-items:center;gap:10px}.cover{width:66px;height:66px;object-fit:contain;background:#050505;border-radius:10px}
+.meta{flex:1}.meta b,.meta small{display:block}.meta b{font-size:18px}.meta small{margin-top:4px;color:#ddd}
+.wave{height:68px;width:100%;display:flex;align-items:flex-end;gap:3px;margin:16px 0;overflow:hidden}.wave i{flex:1;min-width:0;height:4px;background:repeating-linear-gradient(to top,transparent 0 2px,#2999ff 2px 6px);border-top:2px solid #9cdeff;filter:drop-shadow(0 0 3px #1586ef66);transition:height 80ms linear}@media(prefers-reduced-motion:reduce){.wave i{transition:none}}
+.vol{display:flex;gap:8px;align-items:center}input{width:100%;accent-color:red}
+.content{padding:28px 18px 120px}.card{background:#121317;border:1px solid #303238;border-radius:15px;padding:18px;margin:12px 0}
+.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%);background:#1a1b1f;padding:10px 14px;border-radius:99px;opacity:0;transition:.2s;z-index:50}.toast.on{opacity:1}
+.note{margin:12px 14px;padding:10px 12px;border:1px solid #34363b;border-radius:12px;color:#bbb;font-size:12px;text-align:center}
+.contact-card{text-align:center;padding:20px 14px 28px}.contact-art{display:block;width:100%;max-width:360px;height:auto;margin:0 auto 16px}.contact-card>b{font-size:20px}.contact-card>p{color:#ccc;margin:18px 0 8px}.contact-email{color:#fff;text-decoration-color:#ff2934;text-underline-offset:5px;overflow-wrap:anywhere;line-height:1.7}.contact-email:focus-visible{outline:2px solid #ff2934;outline-offset:5px}.contact-signal{animation:contact-broadcast 2.4s ease-in-out infinite}.signal-2{animation-delay:.3s}.signal-3{animation-delay:.6s}@keyframes contact-broadcast{0%,100%{opacity:.2}50%{opacity:1}}@media(prefers-reduced-motion:reduce){.contact-signal{animation:none;opacity:.8}}.contact-socials{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:14px}.contact-social{display:inline-flex;align-items:center;gap:9px;padding:12px 15px;border:1px solid #493034;border-radius:99px;background:#191115;color:#fff;font-size:14px;text-decoration:none}.contact-social svg{color:#ff2934;flex-shrink:0}
+.program-art{position:relative;overflow:hidden;border-radius:16px;background:#090909;border:1px solid #492329;aspect-ratio:3/2}.program-art img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;transform-origin:center}.program-art[data-style="reggaeton"] img{transform:scale(1.75);transform-origin:18% 32%}.program-art[data-style="rock"] img{transform:scale(1.75);transform-origin:85% 32%}.program-caption{position:absolute;inset:auto 0 0;padding:34px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.9));pointer-events:none}.program-caption b,.program-caption span{display:block}.program-caption b{font-size:22px}.program-caption span{font-size:12px;color:#ddd;margin-top:4px}.program-options{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.program-options button{flex:1;min-width:74px;padding:12px 8px;border-radius:99px;border:1px solid #643139;background:#171014;color:#fff;font:inherit;font-size:12px}.program-options button[aria-pressed="true"]{background:#e50914;border-color:#ff4149}.program-options button:focus-visible{outline:2px solid white;outline-offset:3px}@media(prefers-reduced-motion:reduce){.program-art img{transition:none}}
+.program-headline{font-size:clamp(28px,7vw,46px);font-weight:900;line-height:1.15;text-align:center;padding:24px 16px;text-wrap:balance}.about-city{position:relative;isolation:isolate;overflow:hidden;border:1px solid #74232e;border-radius:20px;min-height:720px;background:#10070c;box-shadow:0 12px 38px #e509141c}.about-city-scene{position:absolute;inset:0;z-index:-2;animation:about-drift 14s ease-in-out infinite alternate}.about-city-scene img{width:100%;height:100%;object-fit:cover;object-position:center top}.about-city:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.7),rgba(0,0,0,.72) 50%,rgba(0,0,0,.05) 85%)}.about-biography{padding:32px 22px 260px;color:#fff;text-shadow:0 2px 8px #000}.about-biography h2{font-size:clamp(28px,7vw,42px);line-height:1.1;margin:0 0 24px;max-width:13ch}.about-biography p{font-size:16px;line-height:1.75;margin:0 0 20px;max-width:46ch}.about-biography strong{font-size:22px;color:#fff}.about-broadcast{position:absolute;left:93.2%;top:10%;width:12px;height:12px;transform:translate(-50%,-50%);border-radius:50%;background:#ff666c;box-shadow:0 0 16px #ff1626}.about-broadcast:before,.about-broadcast:after{content:"";position:absolute;inset:-8px;border:1px solid #ff6270;border-radius:50%;animation:about-waves 4s ease-out infinite}.about-broadcast:after{animation-delay:2s}@keyframes about-waves{from{transform:scale(.6);opacity:.8}to{transform:scale(5);opacity:0}}@keyframes about-drift{from{transform:scale(1)}to{transform:scale(1.04)}}@media(prefers-reduced-motion:reduce){.about-city-scene,.about-broadcast:before,.about-broadcast:after{animation:none}}/* Inicio: encuadre proporcional y énfasis suave en la marca original. */
+#inicio .hero{height:calc(min(100vw,760px) * .8 + 230px)}
+#inicio .hero-bg{inset:auto 0 auto;top:calc(min(100vw,760px) * -.316043);width:100%;height:auto;aspect-ratio:829/1800;background-size:100% 100%;background-position:center top;animation:home-brand-light 6s ease-in-out infinite}
+#inicio .hero:after{background:linear-gradient(to bottom,transparent 0%,transparent calc(min(100vw,760px) * .68),#050505 calc(min(100vw,760px) * .85),#050505 100%)}
+#inicio .hero:before{content:"";position:absolute;z-index:1;pointer-events:none;left:8%;right:8%;top:calc(min(100vw,760px) * .40);height:calc(min(100vw,760px) * .30);border-radius:50%;background:radial-gradient(ellipse,rgba(229,9,20,.15),transparent 70%);mix-blend-mode:screen;animation:home-brand-glow 6s ease-in-out infinite}
+@keyframes home-brand-light{0%,100%{filter:saturate(1.08) brightness(1)}50%{filter:saturate(1.16) brightness(1.12)}}
+@keyframes home-brand-glow{0%,100%{opacity:.3;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){#inicio .hero-bg,#inicio .hero:before{animation:none}}.player .meta{min-width:0}.player .meta b,.player .meta small{overflow-wrap:anywhere}.player .cover{flex-shrink:0}.mini-player[hidden]{display:none}.mini-player{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,760px);display:flex;align-items:center;gap:12px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:#101014f5;border-top:1px solid #653039;z-index:30}.mini-player img{width:46px;height:46px;object-fit:contain;border-radius:8px}.mini-player .mini-copy{min-width:0;flex:1}.mini-player b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}.mini-player small{color:#ff656c}.mini-player button{border:1px solid #fff;border-radius:50%;width:46px;height:46px;background:#e50914;color:#fff;font-size:22px;flex-shrink:0}.install-help{font-size:13px;line-height:1.6;margin-top:24px}.install-help summary{cursor:pointer;color:#fff}.content{padding-bottom:calc(145px + env(safe-area-inset-bottom))}</style><meta name="theme-color" content="#050505"><meta name="description" content="Radio Mixtaz 98.5: música que te prende las 24/7 sin parar."><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="radio-mixtaz-cover-v3.png"><link rel="icon" href="radio-mixtaz-cover-v3.png"><meta name="apple-mobile-web-app-title" content="Radio Mixtaz"><meta name="apple-mobile-web-app-capable" content="yes"><meta property="og:type" content="website"><meta property="og:title" content="Radio Mixtaz 98.5"><meta property="og:description" content="Tu música, tu estación. Escúchanos en vivo las 24/7."><meta property="og:url" content="https://radio-mixtaz-mobile-ym22vwcfj5-9152.vercel.app/"><meta property="og:image" content="https://radio-mixtaz-mobile-ym22vwcfj5-9152.vercel.app/radio-mixtaz-cover-v3.png"><meta property="og:image:width" content="512"><meta property="og:image:height" content="512"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://radio-mixtaz-mobile-ym22vwcfj5-9152.vercel.app/radio-mixtaz-cover-v3.png"><link rel="stylesheet" href="music-submission.css"></head><body><div class="app">
+<header><div class="top"><img class="logo" src="image-2.webp"><div class="actions"><button class="icon">⌕</button><button id="heart" class="icon">♡</button><button class="icon">☰</button><button id="liveTop" class="live">◉ EN VIVO</button></div></div>
+<nav><button class="tab on" data-id="inicio">Inicio</button><button class="tab" data-id="programacion">Programación</button><button class="tab" data-id="musica">Música</button><button class="tab" data-id="nosotros">Nosotros</button><button class="tab" data-id="contacto">Contacto</button></nav></header>
+<section id="inicio" class="page on">
+<div class="hero"><div class="hero-bg"></div><div class="real-controls"><div class="genres">POP | ROCK | SALSA | REGGAETÓN | LATIN POP | AND MORE...</div><div class="controls"><button id="fav" class="pill">♡ FAVORITO</button><button id="play" class="play">▶</button><button id="share" class="pill">↗ COMPARTIR</button></div><div class="status"><span class="dot"></span><span id="status">LISTO PARA TRANSMITIR</span><small>Mixtaz 98.5 FM</small></div></div></div>
+<div class="player"><div class="row"><img class="cover" src="image-2.webp"><div class="meta"><b>Mixtaz 98.5 FM</b><small>Tu música, tu estación</small></div><button id="livePlayer" class="live">◉ EN VIVO</button></div><div id="wave" class="wave"></div><div class="vol">🔊 <input id="volume" type="range" min="0" max="1" step=".01" value="1"></div></div>
+<div class="note">© 2026 Mixtaz Broadcasting Company. Todos los derechos reservados.</div></section>
+<section id="programacion" class="page content"><h1>Programación</h1><div class="card program-headline">Música que te prende las 24/7 sin parar.</div><div class="program-art" data-style="mix"><img src="image-4.webp" alt="Un cantante de reggaetón y un guitarrista de rock en un escenario con luces rojas"><div class="program-caption"><b id="program-genre" aria-live="polite">Reggaetón + Rock</b><span>La energía de Mixtaz</span></div></div><div class="program-options" role="group" aria-label="Explorar estilos de la imagen"><button type="button" data-music-style="mix" aria-pressed="true">Mixtaz Mix</button><button type="button" data-music-style="reggaeton" aria-pressed="false">Reggaetón</button><button type="button" data-music-style="rock" aria-pressed="false">Rock</button></div></section>
+<section id="musica" class="page content">
+<div class="ms-eyebrow">MIXTAZ MUSIC DEPARTMENT</div>
+<h1 class="ms-title">Tu sonido.<br><span>Nuestra próxima mezcla.</span></h1>
+<p class="ms-intro">Artistas, bandas, sellos y promotores: queremos escuchar lo que están creando.</p>
+<div class="ms-genres" aria-label="Géneros de Mixtaz"><span>Pop</span><span>Rock</span><span>Salsa</span><span>Reggaetón</span><span>Latin Pop</span><span>Y más</span></div>
+<div class="ms-banner"><div><span class="ms-eyebrow">ABIERTO A NUEVA MÚSICA</span><h2>Music Submission</h2><p>Comparte tu lanzamiento con Radio Mixtaz 98.5.</p></div><a class="ms-primary" href="#music-submission">Enviar mi música <span aria-hidden="true">↗</span></a></div>
+<form id="music-submission" class="ms-form" action="https://formsubmit.co/mixtaz98.5.online@gmail.com" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="Music Submission — Radio Mixtaz 98.5"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://radio-mixtaz-mobile.vercel.app/submission-received.html"><input type="text" name="_honey" class="ms-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="ms-required">Los campos con * son obligatorios. Un lanzamiento por envío.</p>
+<fieldset><legend><span>01</span> Artista y contacto</legend><div class="ms-grid">
+<label class="ms-field">Artist / Band Name <span aria-hidden="true">*</span><input type="text" name="Artist / Band Name" required maxlength="120" autocomplete="organization"></label>
+<label class="ms-field">Contact Name <span aria-hidden="true">*</span><input type="text" name="Contact Name" required maxlength="120" autocomplete="name"></label>
+<label class="ms-field">Email <span aria-hidden="true">*</span><input type="email" name="email" required maxlength="180" autocomplete="email"></label>
+<label class="ms-field">Phone · opcional<input type="tel" name="Phone"  maxlength="40" autocomplete="tel"></label>
+<label class="ms-field">Country <span aria-hidden="true">*</span><input type="text" name="Country" required maxlength="80" autocomplete="country-name"></label>
+<label class="ms-field">City <span aria-hidden="true">*</span><input type="text" name="City" required maxlength="100" autocomplete="address-level2"></label>
+</div></fieldset>
+<fieldset><legend><span>02</span> Tu lanzamiento</legend><div class="ms-grid">
+<label class="ms-field">Song Title <span aria-hidden="true">*</span><input type="text" name="Song Title" required maxlength="160"></label>
+<label class="ms-field">Genre <span aria-hidden="true">*</span><select name="Genre" required><option value="">Selecciona una opción</option><option>Pop</option><option>Rock</option><option>Salsa</option><option>Reggaetón</option><option>Latin Pop</option><option>Dance / Electronic</option><option>Regional Latin</option><option>Other</option></select></label>
+<label class="ms-field">Release Date <span aria-hidden="true">*</span><input type="date" name="Release Date" required ></label>
+<label class="ms-field">Record Label / Independent <span aria-hidden="true">*</span><input type="text" name="Record Label / Independent" required maxlength="120" placeholder="Nombre del sello o Independent"></label>
+<label class="ms-field">Clean / Explicit <span aria-hidden="true">*</span><select name="Version" required><option value="">Selecciona una opción</option><option>Clean / Radio Edit</option><option>Explicit</option><option>Instrumental</option></select></label>
+<label class="ms-field">ISRC · opcional<input type="text" name="ISRC"  maxlength="15" placeholder="US-ABC-26-00001"></label>
+</div><label class="ms-field ms-wide">Short Artist Bio <span aria-hidden="true">*</span><textarea name="Artist Bio" required maxlength="2000" rows="4" placeholder="Cuéntanos sobre el artista y su música."></textarea></label><label class="ms-field ms-wide">Song Description / Press Notes · opcional<textarea name="Press Notes" maxlength="3000" rows="4" placeholder="La historia del lanzamiento, créditos o información para programación."></textarea></label></fieldset>
+<fieldset><legend><span>03</span> Escucha, archivos y enlaces</legend><p class="ms-help">Adjunta tu radio edit en MP3 o WAV, o comparte un enlace de descarga accesible. Audio y portada: máximo 10 MB en total. Para archivos más grandes, usa un enlace.</p>
+<div class="ms-grid"><label class="ms-field ms-upload">Radio Edit · MP3 / WAV<input id="ms-audio" type="file" name="Radio Edit" accept=".mp3,.wav,audio/mpeg,audio/wav,audio/x-wav" aria-describedby="ms-files-note"><small>Versión lista para radio, preferiblemente clean.</small></label><label class="ms-field ms-upload">Cover Artwork · JPG / PNG / WebP<input id="ms-artwork" type="file" name="Cover Artwork" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" aria-describedby="ms-files-note"><small>Portada oficial del lanzamiento · opcional.</small></label></div>
+<p id="ms-files-note" class="ms-help" role="status">No hay archivos seleccionados.</p>
+<label class="ms-field">Audio Download Link<input type="url" name="Audio Download Link"  id="ms-audio-link" maxlength="1500" placeholder="https://…" aria-describedby="ms-link-note"></label>
+<p id="ms-link-note" class="ms-help">Obligatorio si no adjuntas audio. Revisa que el enlace permita escuchar o descargar sin solicitar acceso.</p>
+<div class="ms-grid"><label class="ms-field">Spotify / Apple Music / YouTube · opcional<input type="url" name="Streaming Link"  maxlength="1500" placeholder="https://…"></label><label class="ms-field">Instagram / TikTok / Website · opcional<input type="url" name="Social / Website"  maxlength="1500" placeholder="https://…"></label></div></fieldset>
+<div class="ms-consent"><label><input type="checkbox" name="Rights Authorization" value="Confirmo autorización para enviar esta música y permitir su evaluación para posible difusión en Mixtaz 98.5." required><span>Confirmo que tengo autorización para enviar esta música y permitir que Mixtaz 98.5 la evalúe para una posible difusión. <span aria-hidden="true">*</span></span></label><label><input type="checkbox" name="Submission Consent" value="Acepto el envío de mis datos y archivos a Mixtaz mediante FormSubmit para revisar este lanzamiento y contactarme." required><span>Acepto enviar estos datos y archivos a Mixtaz mediante FormSubmit para revisar mi lanzamiento y contactarme. <span aria-hidden="true">*</span></span></label></div>
+<p class="ms-disclaimer">Submission does not guarantee airplay.<br>Enviar una canción no garantiza su difusión ni una respuesta del equipo.</p>
+<p id="ms-error" class="ms-error" role="alert" hidden></p>
+<button class="ms-primary ms-submit" type="submit">Enviar a Mixtaz <span aria-hidden="true">↗</span></button><p class="ms-help ms-bottom">El envío se dirige a <a href="mailto:mixtaz98.5.online@gmail.com">mixtaz98.5.online@gmail.com</a>. Completarás una verificación antispam antes de finalizar. <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">Privacidad de FormSubmit</a>.</p>
+</form></section>
+<section id="nosotros" class="page content"><h1>Nosotros</h1><div class="about-city"><div class="about-city-scene" aria-hidden="true"><img src="image-5.webp" alt=""><span class="about-broadcast"></span></div><div class="about-biography"><h2>Radio Mixtaz 98.5 FM</h2><p>Radio Mixtaz es una estación de Mixtaz Broadcasting Company. Transmitimos desde 2010 con los géneros más versátiles: reggaetón, rock, pop, salsa y sonidos latinos.</p><p>Nuestra esencia es la mezcla: distintos ritmos, una misma energía y música que te prende las 24/7 sin parar.</p><p><strong>Tu música, tu estación.</strong></p></div></div></section>
+<section id="contacto" class="page content"><h1>Contacto</h1><details class="card install-help"><summary>Guardar Mixtaz en mi celular</summary><p><b>iPhone:</b> abre esta página en Safari, toca Compartir y selecciona Añadir a pantalla de inicio.</p><p><b>Android:</b> abre el menú del navegador y busca Añadir a pantalla de inicio o Instalar aplicación.</p><p>Necesitas conexión a internet para escuchar la radio.</p></details><div class="card contact-card"><svg class="contact-art" viewBox="0 0 360 180" role="img" aria-labelledby="contact-art-title"><title id="contact-art-title">Ondas de Radio Mixtaz en movimiento</title><defs><radialGradient id="contact-glow"><stop stop-color="#e50914" stop-opacity=".32"/><stop offset="1" stop-color="#e50914" stop-opacity="0"/></radialGradient></defs><ellipse cx="180" cy="90" rx="175" ry="85" fill="url(#contact-glow)"/><g fill="none" stroke="#ff2934" stroke-width="3" stroke-linecap="round"><path class="contact-signal signal-1" d="M133 57a57 57 0 0 0 0 66M227 57a57 57 0 0 1 0 66"/><path class="contact-signal signal-2" d="M110 39a86 86 0 0 0 0 102M250 39a86 86 0 0 1 0 102"/><path class="contact-signal signal-3" d="M87 22a114 114 0 0 0 0 136M273 22a114 114 0 0 1 0 136"/></g><rect x="157" y="43" width="46" height="73" rx="23" fill="#151519" stroke="white" stroke-width="3"/><path d="M169 58h22m-22 12h22m-22 12h22m-45 9v5a35 35 0 0 0 70 0v-5m-35 40v20m-19 0h38" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/></svg><b>Radio Mixtaz 98.5 FM</b><p>Correo:</p><a class="contact-email" href="mailto:mixtaz98.5.online@gmail.com">mixtaz98.5.online@gmail.com</a><p>Teléfono:</p><a class="contact-email" href="tel:+17753515685">775-351-5685</a><p>Síguenos en redes</p><div class="contact-socials"><a class="contact-social" aria-label="Facebook de Mixtaz 98.5" href="https://www.facebook.com/people/Mixtaz-985/61587905343971/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg><span>Facebook</span></a></div></div></section>
+</div>
+<audio crossorigin="anonymous" id="radio" playsinline preload="none" src="https://cast5.asurahosting.com/proxy/mixtazb1/stream"></audio><div id="toast" class="toast"></div>
+<script>
+const radio=document.getElementById('radio'),play=document.getElementById('play'),status=document.getElementById('status'),toast=document.getElementById('toast');
+const wave=document.getElementById('wave'),liveTop=document.getElementById('liveTop'),livePlayer=document.getElementById('livePlayer'),volume=document.getElementById('volume'),fav=document.getElementById('fav'),heart=document.getElementById('heart'),share=document.getElementById('share');
+// One audio graph for the existing stream; the analyser never creates a second player.
+let audioGraph = null;
+let equalizerFrame = 0;
+const equalizerBars = Array.from({length:48}, () => {
+  const bar = document.createElement('i');
+  wave.appendChild(bar);
+  return bar;
+});
+wave.setAttribute('aria-hidden','true');
+function stopEqualizer() {
+  cancelAnimationFrame(equalizerFrame);
+  equalizerFrame = 0;
+  equalizerBars.forEach(bar => bar.style.height = '4px');
+}
+function drawEqualizer() {
+  stopEqualizer();
+  if (!audioGraph || radio.paused || document.hidden) return;
+  const {context, analyser, bins} = audioGraph;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let last = 0;
+  function frame(time) {
+    if (radio.paused || radio.ended || document.hidden) { stopEqualizer(); return; }
+    if (time-last >= (reduced ? 250 : 40)) {
+      last = time;
+      analyser.getByteFrequencyData(bins);
+      const hzPerBin = context.sampleRate / analyser.fftSize;
+      equalizerBars.forEach((bar,i) => {
+        const low = Math.max(1,Math.floor(50 * Math.pow(240,i/48) / hzPerBin));
+        const high = Math.min(bins.length,Math.max(low+1,Math.ceil(50 * Math.pow(240,(i+1)/48) / hzPerBin)));
+        let sum=0;
+        for(let b=low;b<high;b++) sum+=bins[b]*bins[b];
+        const level=high>low ? Math.sqrt(sum/(high-low))/255 : 0;
+        bar.style.height = `${4+level*60}px`;
+      });
+    }
+    equalizerFrame=requestAnimationFrame(frame);
+  }
+  equalizerFrame=requestAnimationFrame(frame);
+}
+async function prepareEqualizer() {
+  const AudioEngine=window.AudioContext || window.webkitAudioContext;
+  if (!AudioEngine) return;
+  if (!audioGraph) {
+    const context=new AudioEngine();
+    const analyser=context.createAnalyser();
+    analyser.fftSize=2048;
+    analyser.smoothingTimeConstant=.78;
+    const source=context.createMediaElementSource(radio);
+    source.connect(context.destination);
+    source.connect(analyser);
+    audioGraph={context,analyser,source,bins:new Uint8Array(analyser.frequencyBinCount)};
+  }
+  if(audioGraph.context.state!=='running') await audioGraph.context.resume();
+}
+radio.addEventListener('playing',drawEqualizer);
+['pause','ended','waiting','error','emptied'].forEach(event=>radio.addEventListener(event,stopEqualizer));
+document.addEventListener('visibilitychange',()=>document.hidden?stopEqualizer():drawEqualizer());
+
+const msg=x=>{toast.textContent=x;toast.classList.add('on');clearTimeout(window.tt);window.tt=setTimeout(()=>toast.classList.remove('on'),1500)};
+let connecting=false, wantsPlayback=false, retryTimer=null, stallTimer=null, retries=0, attempt=0;
+function playerState(label,active){status.textContent=label;play.textContent=active?'Ⅱ':'▶';play.setAttribute('aria-label',active?'Pausar radio':'Reproducir radio');play.setAttribute('aria-pressed',String(active));}
+function clearRecovery(){clearTimeout(retryTimer);clearTimeout(stallTimer);retryTimer=null;stallTimer=null;}
+function pauseRadio(){wantsPlayback=false;connecting=false;attempt++;clearRecovery();radio.pause();playerState('PAUSADO',false);}
+function recover(){
+ if(!wantsPlayback||retryTimer)return;
+ clearTimeout(stallTimer);stallTimer=null;connecting=true;
+ playerState(navigator.onLine===false?'SIN CONEXIÓN · REINTENTANDO':'RECONECTANDO...',true);
+ retryTimer=setTimeout(()=>{retryTimer=null;if(wantsPlayback)startRadio(true)},Math.min(30000,2000*2**Math.min(retries++,4)));
+}
+async function startRadio(reload=false){
+ if(!wantsPlayback)return;
+ const token=++attempt;clearRecovery();connecting=true;playerState('CONECTANDO...',true);
+ stallTimer=setTimeout(recover,15000);
+ try{if(reload||radio.error)radio.load();await prepareEqualizer();if(token!==attempt||!wantsPlayback)return;await radio.play();}
+ catch(e){if(token!==attempt||!wantsPlayback)return;if(e.name==='NotAllowedError'){pauseRadio();playerState('TOCA PLAY PARA CONTINUAR',false)}else if(e.name!=='AbortError')recover()}
+}
+function toggle(){if(wantsPlayback){pauseRadio();return}wantsPlayback=true;retries=0;startRadio()}
+radio.addEventListener('playing',()=>{if(!wantsPlayback){radio.pause();return}clearRecovery();retries=0;connecting=false;playerState('TRANSMITIENDO EN VIVO',true)});
+radio.addEventListener('pause',()=>{if(!wantsPlayback)playerState('PAUSADO',false);else if(!connecting){wantsPlayback=false;clearRecovery();playerState('PAUSADO',false)}});
+radio.addEventListener('waiting',()=>{if(wantsPlayback){playerState('CONECTANDO...',true);if(!stallTimer)stallTimer=setTimeout(recover,15000)}});
+radio.addEventListener('stalled',()=>{if(wantsPlayback&&!stallTimer)stallTimer=setTimeout(recover,15000)});
+radio.addEventListener('error',recover);
+radio.addEventListener('ended',recover);
+window.addEventListener('online',()=>{if(wantsPlayback)startRadio(true)});
+window.addEventListener('offline',()=>{if(wantsPlayback)recover()});
+
+play.setAttribute('aria-label','Reproducir radio');
+volume.setAttribute('aria-label','Volumen');
+status.setAttribute('role','status');
+play.onclick=toggle;liveTop.onclick=toggle;livePlayer.onclick=toggle;volume.oninput=e=>radio.volume=+e.target.value;
+function drawFav(){let x=localStorage.mf==='1';fav.textContent=(x?'♥':'♡')+' FAVORITO';heart.textContent=x?'♥':'♡'}drawFav();
+fav.onclick=heart.onclick=()=>{localStorage.mf=localStorage.mf==='1'?'0':'1';drawFav()};
+share.onclick=async()=>{try{if(navigator.share)await navigator.share({title:'Radio Mixtaz 98.5 FM',url:location.href});else msg('Compartir disponible al publicarla')}catch(e){}};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab,.page').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.id).classList.add('on');scrollTo(0,0)})
+
+document.querySelectorAll('[data-music-style]').forEach(button=>button.addEventListener('click',()=>{const style=button.dataset.musicStyle;document.querySelector('.program-art').dataset.style=style;document.getElementById('program-genre').textContent={mix:'Reggaetón + Rock',reggaeton:'Reggaetón',rock:'Rock'}[style];document.querySelectorAll('[data-music-style]').forEach(option=>option.setAttribute('aria-pressed',String(option===button)))}));
+</script><script>(() => {
+  const audio = document.getElementById('radio');
+  const cover = document.querySelector('.player .cover');
+  const title = document.querySelector('.player .meta b');
+  const artist = document.querySelector('.player .meta small');
+  const fallback = new URL('radio-mixtaz-cover-v3.png', location.href).href;
+  const station = 'Radio Mixtaz 98.5';
+  let current = {title: station, artist: 'Tu música, tu estación', album: '', artwork: fallback};
+  let busy = false;
+  let generation = 0;
+  const clean = value => typeof value === 'string' ? value.trim().slice(0,300) : '';
+  const known = value => value && !/^(unknown|desconocido|n\/a)$/i.test(value);
+  function publish() {
+    title.textContent = current.title;
+    artist.textContent = current.artist;
+    document.title = current.artwork === fallback ? station : `${current.title} — Radio Mixtaz`;
+    if ('mediaSession' in navigator && typeof MediaMetadata !== 'undefined') {
+      navigator.mediaSession.metadata = new MediaMetadata({title:current.artwork === fallback ? station : current.title, artist:current.artwork === fallback ? '' : current.artist, album:current.artwork === fallback ? '' : current.album, artwork:[current.artwork === fallback ? {src:fallback,sizes:'512x512',type:'image/png'} : {src:current.artwork}]});
+    }
+  }
+  function show(data) {
+    const version = ++generation;
+    const track = data.track || {};
+    let song = clean(track.title);
+    let performer = clean(track.artist);
+    if (!known(song)) song = clean(data.song).replace(/^Unknown\s*-\s*/i,'');
+    current = {title:!data.offline && known(song) ? song : station, artist:known(performer) ? performer : station, album:clean(track.album), artwork:fallback};
+    cover.src = fallback;
+    cover.alt = 'Logo de Radio Mixtaz';
+    publish();
+    const url = clean(track.imageurl);
+    if (data.offline || !url || /nocover|no[-_]cover|placeholder/i.test(url)) return;
+    let parsed;
+    try { parsed = new URL(url); } catch { return; }
+    if (parsed.protocol !== 'https:') return;
+    const image = new Image();
+    image.onload = () => {
+      if(version !== generation) return;
+      current.artwork = parsed.href;
+      cover.src = parsed.href;
+      cover.alt = `Portada de ${current.album || current.title}`;
+      publish();
+    };
+    image.src = parsed.href;
+  }
+  async function refresh() {
+    if(busy) return;
+    busy = true;
+    const controller = new AbortController();
+    const timeout = setTimeout(()=>controller.abort(),8000);
+    try {
+      const response = await fetch('https://cast5.asurahosting.com/rpc/mixtazb1/streaminfo.get',{signal:controller.signal,cache:'no-store'});
+      if(!response.ok) throw new Error('Metadata unavailable');
+      const payload = await response.json();
+      if(!payload.data?.[0] || payload.type !== 'result') throw new Error('Invalid metadata');
+      show(payload.data[0]);
+    } catch {
+      show({offline:true});
+    } finally {clearTimeout(timeout);busy=false;}
+  }
+  if ('mediaSession' in navigator) {
+    const set = (action, handler) => {try{navigator.mediaSession.setActionHandler(action,handler)}catch{}};
+    set('play',()=>{if(audio.paused) document.getElementById('play').click()});
+    set('pause',()=>pauseRadio());
+    set('stop',()=>pauseRadio());
+    for(const action of ['seekbackward','seekforward','seekto','previoustrack','nexttrack']) set(action,null);
+    audio.addEventListener('playing',()=>{navigator.mediaSession.playbackState='playing';refresh()});
+    audio.addEventListener('pause',()=>{navigator.mediaSession.playbackState='paused'});
+    audio.addEventListener('error',()=>{navigator.mediaSession.playbackState='none'});
+  }
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden) refresh()});
+  publish();
+  refresh();
+  setInterval(()=>{if(!audio.paused || !document.hidden) refresh()},15000);
+})();
+</script><aside id="mini-player" class="mini-player" aria-label="Reproductor de radio" hidden><img id="mini-cover" src="radio-mixtaz-cover-v3.png" alt="Portada"><div class="mini-copy"><b id="mini-title">Radio Mixtaz 98.5</b><small>EN VIVO</small></div><button id="mini-play" aria-label="Reproducir radio">▶</button></aside><script>(() => {
+ const mini=document.getElementById('mini-player');
+ const button=document.getElementById('mini-play');
+ const title=document.getElementById('mini-title');
+ const cover=document.getElementById('mini-cover');
+ const update=()=>{
+   mini.hidden=document.getElementById('inicio').classList.contains('on');
+   title.textContent=document.querySelector('.player .meta b').textContent;
+   cover.src=document.querySelector('.player .cover').src;
+   button.textContent=play.textContent;
+   button.setAttribute('aria-label',play.getAttribute('aria-label'));
+   button.setAttribute('aria-pressed',play.getAttribute('aria-pressed')||'false');
+ };
+ button.addEventListener('click',toggle);
+ new MutationObserver(update).observe(document.getElementById('inicio'),{attributes:true,attributeFilter:['class']});
+ new MutationObserver(update).observe(document.querySelector('.player'),{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['src']});
+ new MutationObserver(update).observe(play,{subtree:true,childList:true,attributes:true,attributeFilter:['aria-label','aria-pressed']});
+ update();
+})();
+</script><script src="music-submission.js"></script></body></html>
